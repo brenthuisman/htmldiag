@@ -1,0 +1,56 @@
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="domarrow.js"></script>
+    <link rel="stylesheet" href="htmldiag.css">
+    <style>
+        .diag-cont div div {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="diag-spacer"></div>
+<div class="diag-cont">
+    <div id="sc_src">
+        <div id="sc_dsc" class="diag-note">describe the neuroscience</div>
+        <div id="recipe_src">Recipe</div>
+        <div class="diag-spacer"></div>
+        <div id="cells_src">Cells</div>
+        <div class="diag-spacer"></div>
+        <div id="network_src">Network</div>
+        <div class="diag-spacer"></div>
+        <div id="io_src">In- & outputs</div>
+    </div>
+    <div id="ex_src">
+        <div class="diag-spacer"></div>
+        <div id="ctx_src">Context
+            <div id="ctx_dsc" class="diag-note">describe hardware: GPUs, MPI, #threads.</div>
+        </div>
+        <div class="diag-spacer"></div>
+        <div id="domdec_src">Domain decomposition
+            <div id="domdec_dsc" class="diag-note">describe how to use hardware: load balancer, partition hints</div>
+        </div>
+        <div class="diag-spacer"></div>
+        <div id="ex_dsc" class="diag-note">describe the execution</div>
+        <div id="sim_src">Simulation</div>
+    </div>
+</div>
+
+<connection from="#cells_src" to="#recipe_src" fromX="0.1" fromY="0" toX="0.1" toY="1" tail onlyVisible></connection>
+<connection from="#network_src" to="#recipe_src" fromX="0.2" fromY="0" toX="0.2" toY="1" tail onlyVisible></connection>
+<connection from="#io_src" to="#recipe_src" fromX="0.3" fromY="0" toX="0.3" toY="1" tail onlyVisible></connection>
+
+<connection from="#recipe_src" to="#domdec_src" fromX="1" fromY="1" toX="0" toY="0.5" tail onlyVisible></connection>
+<connection from="#recipe_src" to="#sim_src" fromX="1" fromY="1" toX="0" toY="0.5" tail onlyVisible></connection>
+<connection from="#ctx_src" to="#sim_src" fromX="0.1" fromY="1" toX="0.1" toY="0" tail onlyVisible></connection>
+<connection from="#ctx_src" to="#domdec_src" fromX="0.05" fromY="1" toX="0.05" toY="0" tail onlyVisible></connection>
+<connection from="#domdec_src" to="#sim_src" fromX="0.05" fromY="1" toX="0.05" toY="0" tail onlyVisible></connection>
+
+<connection from="#sc_src" to="#sc_dsc" color="rgb(221, 191, 146)" fromX="0.2" fromY="0" toX="0" tail onlyVisible></connection>
+<connection from="#ex_src" to="#ex_dsc" color="rgb(221, 191, 146)" fromX="0.2" fromY="0" toX="0" tail onlyVisible></connection>
+<connection from="#ctx_src" to="#ctx_dsc" color="rgb(221, 191, 146)" fromX="0.2" fromY="0" toX="0" tail onlyVisible></connection>
+<connection from="#domdec_src" to="#domdec_dsc" color="rgb(221, 191, 146)" fromX="0.2" fromY="0" toX="0" tail onlyVisible></connection>
+
+</body>
