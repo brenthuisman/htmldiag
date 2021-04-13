@@ -1,0 +1,90 @@
+<head>
+    <script type="text/javascript" src="domarrow.js"></script>
+    <style>
+        .diag {
+            display: flex;
+        }
+        .diag > div {
+            border: 2px solid black;
+            flex: 1;
+            margin: 10px 20px;
+            padding: 10px;
+        }
+        .diag div div {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        connection .line .arrow {
+            top: -5px;
+            height: 0px;
+            width: 0px;
+            position: absolute;
+            border-bottom: 6px solid transparent;
+            border-top: 6px solid transparent;
+            background-clip: border-box;
+        }
+        connection .line .arrow-fw {
+            border-right: 12px solid black;
+        }
+
+        connection .line .arrow-bw {
+            left: 100%;
+            border-left: 12px solid black;
+            transform: translateX(-12px);
+        }
+
+        connection .line .text {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -100%);
+        }
+
+        connection .line {
+            position:absolute;
+            height:2px;
+            background-color: black;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="diag">
+        <div id="recipe_src">Recipe
+            <div>Cell descriptions
+                <div>global cable cell properties</div>
+                <div>cable cell A</div>
+                <div>cable cell B</div>
+                <div>LIF cell C</div>
+                <div>...</div>
+            </div>
+            <div>Network
+                <div>connection D</div>
+                <div>gap junction E</div>
+                <div>...</div>
+            </div>
+            <div>In- & outputs
+                <div>event generator F</div>
+                <div>probe G</div>
+                <div>...</div>
+            </div>
+        </div>
+        <div>Simulation
+            <div id="recipe_dst">Recipe</div>
+            <div>Context (describe hardware)
+                <div>GPUs?</div>
+                <div>MPI?</div>
+                <div>Nb. threads?</div>
+            </div>
+            <div>Domain decomposition (describe how to use hardware)
+                <div>load balancer</div>
+                <div>partition hints</div>
+            </div>
+        </div>
+    </div>
+    <connection from="#recipe_src" to="#recipe_dst" fromX="1" fromY="0.1" toX="0" tail onlyVisible></connection>
+</body>
