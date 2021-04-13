@@ -1,28 +1,29 @@
-.htmldiag {
+.diag-cont {
     display: flex;
 }
-.htmldiag .note {
+.diag-cont .diag-note {
     position: absolute;
     background-color: rgb(221, 191, 146);
     border: none;
     top: -60px;
     left: 20%;
+    border-radius: 5px;
 }
-.htmldiag > div {
+.diag-cont > div {
     border: 2px solid black;
     flex: 1;
     margin: 10px 20px;
     padding: 10px;
     position: relative;
 }
-.htmldiag div div {
+.diag-cont div div {
     border: 1px solid black;
     margin: 10px;
     padding: 10px;
     position: relative;
 }
-.htmldiag .spacer{
-    border: none;
+.diag-spacer{
+    border: none !important;
     height: 2em;
 }
 connection .line .arrow {

@@ -5,49 +5,51 @@
 </head>
 
 <body>
-    <div style="height: 60px;"></div>
-    <div class="htmldiag">
-        <div id="recipe_src">Recipe
-            <div id="recipe_dsc" class="note">describe the neuroscience</div>
-            <div>Cell descriptions
-                <div>global cable cell properties</div>
-                <div>cable cell A</div>
-                <div>cable cell B</div>
-                <div>LIF cell C</div>
-                <div>...</div>
-            </div>
-            <div>Network
-                <div>connection D</div>
-                <div>gap junction E</div>
-                <div>...</div>
-            </div>
-            <div>In- & outputs
-                <div>event generator F</div>
-                <div>probe G</div>
-                <div>...</div>
-            </div>
+
+<div class="diag-spacer"></div>
+<div class="diag-cont">
+    <div id="recipe_src">Recipe
+        <div id="recipe_dsc" class="diag-note">describe the neuroscience</div>
+        <div>Cell descriptions
+            <div>global cable cell properties</div>
+            <div>cable cell A</div>
+            <div>cable cell B</div>
+            <div>LIF cell C</div>
+            <div>...</div>
         </div>
-        <div id="sim_src">Simulation
-            <div id="sim_dsc" class="note">describe the execution</div>
-            <div id="recipe_dst">Recipe</div>
-            <div class="spacer"></div>
-            <div id="conc_src">Context
-                <div id="conc_dsc" class="note">describe hardware</div>
-                <div>GPUs?</div>
-                <div>MPI?</div>
-                <div>Nb. threads?</div>
-            </div>
-            <div class="spacer"></div>
-            <div id="domdec_src">Domain decomposition
-                <div id="domdec_dsc" class="note">describe how to use hardware</div>
-                <div>load balancer</div>
-                <div>partition hints</div>
-            </div>
+        <div>Network
+            <div>connection D</div>
+            <div>gap junction E</div>
+            <div>...</div>
+        </div>
+        <div>In- & outputs
+            <div>event generator F</div>
+            <div>probe G</div>
+            <div>...</div>
         </div>
     </div>
-    <connection from="#recipe_src" to="#recipe_dst" fromX="1" fromY="0.1" toX="0" tail onlyVisible></connection>
-    <connection from="#recipe_src" to="#recipe_dsc" color="rgb(221, 191, 146)" fromX="0.1" fromY="0" toX="0" tail onlyVisible></connection>
-    <connection from="#sim_src" to="#sim_dsc" color="rgb(221, 191, 146)" fromX="0.1" fromY="0" toX="0" tail onlyVisible></connection>
-    <connection from="#conc_src" to="#conc_dsc" color="rgb(221, 191, 146)" fromX="0.1" fromY="0" toX="0" tail onlyVisible></connection>
-    <connection from="#domdec_src" to="#domdec_dsc" color="rgb(221, 191, 146)" fromX="0.1" fromY="0" toX="0" tail onlyVisible></connection>
+    <div id="sim_src">Simulation
+        <div id="sim_dsc" class="diag-note">describe the execution</div>
+        <div id="recipe_dst">Recipe</div>
+        <div class="diag-spacer"></div>
+        <div id="conc_src">Context
+            <div id="conc_dsc" class="diag-note">describe hardware</div>
+            <div>GPUs?</div>
+            <div>MPI?</div>
+            <div>Nb. threads?</div>
+        </div>
+        <div class="diag-spacer"></div>
+        <div id="domdec_src">Domain decomposition
+            <div id="domdec_dsc" class="diag-note">describe how to use hardware</div>
+            <div>load balancer</div>
+            <div>partition hints</div>
+        </div>
+    </div>
+</div>
+<connection from="#recipe_src" to="#recipe_dst" fromX="1" fromY="0.1" toX="0" tail onlyVisible></connection>
+<connection from="#recipe_src" to="#recipe_dsc" color="rgb(221, 191, 146)" fromX="0.1" fromY="0" toX="0" tail onlyVisible></connection>
+<connection from="#sim_src" to="#sim_dsc" color="rgb(221, 191, 146)" fromX="0.1" fromY="0" toX="0" tail onlyVisible></connection>
+<connection from="#conc_src" to="#conc_dsc" color="rgb(221, 191, 146)" fromX="0.1" fromY="0" toX="0" tail onlyVisible></connection>
+<connection from="#domdec_src" to="#domdec_dsc" color="rgb(221, 191, 146)" fromX="0.1" fromY="0" toX="0" tail onlyVisible></connection>
+
 </body>
