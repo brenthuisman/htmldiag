@@ -1,16 +1,29 @@
 .htmldiag {
     display: flex;
 }
+.htmldiag .note {
+    position: absolute;
+    background-color: rgb(221, 191, 146);
+    border: none;
+    top: -60px;
+    left: 20%;
+}
 .htmldiag > div {
     border: 2px solid black;
     flex: 1;
     margin: 10px 20px;
     padding: 10px;
+    position: relative;
 }
 .htmldiag div div {
     border: 1px solid black;
     margin: 10px;
     padding: 10px;
+    position: relative;
+}
+.htmldiag .spacer{
+    border: none;
+    height: 2em;
 }
 connection .line .arrow {
     top: -5px;
