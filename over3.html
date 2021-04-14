@@ -22,6 +22,8 @@
         </div>
         <div>In- & outputs
         </div>
+        <div>...
+        </div>
     </div>
     <div id="sim_src">Simulation
         <div id="sim_dsc" class="diag-note">describe the execution</div>
@@ -36,10 +38,12 @@
         </div>
     </div>
 </div>
-<div class="diag-caption">An overview of Arbor. The two columns reflect a divison that is core to Arbor: the neuroscience is described entirely separate from the execution of the simulation. The :ref:`Recipe <modelrecipe>` ties the neuroscience together: the user can provide any number of cells, each with a particular type, morphology and set of mechanisms; a network configuration; and in- & outputs like event generators and probes. This description, the recipe, is self-contained and can be executed by any configuration of execution. Execution is determined by the available hardware, instructions for how certain parts of a recipe (e.g. cell groups) are executed on that hardware, and then </div>
+<div class="diag-caption">An overview of Arbor. The two columns reflect a division that is core to Arbor: the neuroscience is described entirely separate from the execution of the simulation. The :ref:`Recipe <modelrecipe>` ties the neuroscience together: the user can provide any number of cells, each with a particular type, morphology and set of mechanisms; a network configuration; and in- & outputs like event generators and probes. This description, the recipe, is self-contained and can be executed by any configuration of execution. Execution is determined by the available hardware and instructions for how certain parts of a recipe (e.g. cell groups) are executed on that hardware.</div>
 
 
-<connection from="#recipe_src" to="#recipe_dst" fromX="1" fromY="0.1" toX="0" tail onlyVisible></connection>
+<connection width="1" from="#recipe_src" to="#recipe_dst" fromX="1" fromY="0" toX="0" toY="0" onlyVisible></connection>
+<connection width="1" from="#recipe_src" to="#recipe_dst" fromX="1" fromY="1" toX="0" toY="1" onlyVisible></connection>
+
 <connection from="#recipe_src" to="#recipe_dsc" color="rgb(221, 191, 146)" fromX="0.1" fromY="0" toX="0" tail onlyVisible></connection>
 <connection from="#sim_src" to="#sim_dsc" color="rgb(221, 191, 146)" fromX="0.1" fromY="0" toX="0" tail onlyVisible></connection>
 <connection from="#conc_src" to="#conc_dsc" color="rgb(221, 191, 146)" fromX="0.1" fromY="0" toX="0" tail onlyVisible></connection>
