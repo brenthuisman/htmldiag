@@ -23,10 +23,17 @@
     padding: 10px;
     position: relative;
 }
-.diag-spacer{
+.diag-spacer {
     border: none !important;
     background: none !important;
     height: 1em;
+}
+.diag-caption {
+    width: 90%;
+    text-align: justify;
+    font-style: italic;
+    font-size: 90%;
+    margin: auto;
 }
 connection .line .arrow {
     top: -5px;

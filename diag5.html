@@ -1,0 +1,52 @@
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="domarrow.js"></script>
+    <link rel="stylesheet" href="htmldiag.css">
+    <style>
+        .diag-cont > div {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="diag-spacer"></div>
+<div class="diag-spacer"></div>
+<div class="diag-cont">
+    <div id="recipe_src">Recipe
+        <div id="recipe_dsc" class="diag-note">describe the neuroscience</div>
+        <div>Cell descriptions
+            <div id="c1s">Cell 1</div>
+            <div id="c2s">Cell 2</div>
+            <div id="c3s">Cell 3</div>
+            <div>...</div>
+        </div>
+        <div>Cell kinds
+            <div id="c1ks">Cell 1</div>
+            <div id="c2ks">Cell 2</div>
+            <div id="c3ks">Cell 3</div>
+            <div>...</div>
+        </div>
+        <div>global cable cell properties</div>
+        <div>Network
+            <div>connection D</div>
+            <div>gap junction E</div>
+            <div>...</div>
+        </div>
+        <div>In- & outputs
+            <div>event generator F</div>
+            <div>probe G</div>
+            <div>...</div>
+        </div>
+    </div>
+    <div style="border:none;padding:0;">
+        <div id="c1d">Cable cell A</div>
+        <div id="c2d">Cable cell B</div>
+        <div id="c3d">LIF cell C</div>
+    </div>
+</div>
+<div class="diag-caption">Joechei</div>
+<connection from="#recipe_src" to="#recipe_dsc" color="rgb(221, 191, 146)" fromX="0.1" fromY="0" toX="0" tail onlyVisible></connection>
+
+</body>
