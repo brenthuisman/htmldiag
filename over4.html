@@ -2,11 +2,6 @@
     <meta charset="utf-8">
     <script type="text/javascript" src="domarrow.js"></script>
     <link rel="stylesheet" href="htmldiag.css">
-    <style>
-        .diag-cont > div {
-            border: 2px solid black;
-        }
-    </style>
 </head>
 
 <body>
@@ -32,15 +27,15 @@
         <div id="domdec_dst">Domain decomposition
         </div>
     </div>
-    <div style="border:none;padding:0;">
-        <div id="conc_src" style="border: 2px solid black;">Context
+    <div class="diag-col">
+        <div id="conc_src" class="diag-dim">Context
             <div id="conc_dsc" class="diag-note">describe hardware</div>
             <div>CPUs</div>
             <div>GPUs</div>
             <div>MPI</div>
         </div>
         <div class="diag-spacer"></div>
-        <div id="domdec_src" style="border: 2px solid black;">Domain decomposition
+        <div id="domdec_src" class="diag-dim">Domain decomposition
             <div id="domdec_dsc" class="diag-note">describe how to use hardware</div>
             <div>load balancer</div>
             <div>partition hints</div>
